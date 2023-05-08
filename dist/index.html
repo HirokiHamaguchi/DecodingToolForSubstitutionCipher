@@ -11,24 +11,41 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.min.js"></script>
-    <!-- tsparticles -->
+    <!-- particles -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
-    <!-- <script src="tsparticles.engine.min.js"></script> -->
 <script defer src="main.js"></script></head>
 
 <body>
     <h1>換字式暗号解読用ツール</h1>
-    暗号文
+    <div class="ui container center aligned">
+        <button id="howToButton" class="ui teal button">
+            <i class="question circle icon"></i>
+            how to
+        </button>
+        <button id="hintButton" class="ui yellow button">
+            <i class="lightbulb outline icon"></i>
+            hint
+        </button>
+        <button id="resetButton" class="ui blue button">
+            <i class="sync icon"></i>
+            reset
+        </button>
+        <button id="answerButton" class="ui red button">
+            <i class="bomb icon"></i>
+            answer
+        </button>
+    </div>
+    <h2>暗号文</h2>
     <div id="problem"></div>
-    変換テーブル
+    <h2>変換テーブル</h2>
     <div id="table">
     </div>
-    解読文
+    <h2>解読文</h2>
     <div id="answer"></div>
     <div class="footer-clean">
         <footer>
             <div class="item">
-                <p class="copyright">工学博覧会 暗号班 © 2022</p>
+                <p class="copyright">工学博覧会 暗号班 © 2023</p>
             </div>
         </footer>
     </div>

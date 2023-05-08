@@ -4,8 +4,8 @@
 export default function throwConfetti() {
   // @ts-ignore
   confetti({
-    particleCount: 100,
-    spread: 70,
+    particleCount: 300,
+    spread: 150,
     origin: { y: 0.6 },
   });
 }

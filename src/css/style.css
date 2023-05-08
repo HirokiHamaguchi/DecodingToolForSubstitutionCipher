@@ -11,13 +11,16 @@
 #table td,
 #table th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
   width: fit-content;
 }
 #table select {
   width: 80px;
-  height: 50px;
+  height: 30px;
 }
+
 .ui.dropdown.search {
   /* https://stackoverflow.com/questions/42750197/how-to-set-the-width-of-semantic-ui-dropdown */
   min-width: 0px;
