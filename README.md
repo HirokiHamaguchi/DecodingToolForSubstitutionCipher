@@ -1,0 +1,3 @@
+# DecodingToolForSubstitutionCipher
+
+五月祭用に作った換字式暗号解読用ツールです。
