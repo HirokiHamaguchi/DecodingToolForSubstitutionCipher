@@ -18,7 +18,8 @@ function onSubmit(e: Event) {
       if (result.isConfirmed) {
         window.scrollTo(0, 0);
         setTimeout(() => {
-          location.reload();
+          window.location = window.location;
+          // location.reload();
         }, 10);
       }
     });

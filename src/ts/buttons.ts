@@ -166,7 +166,8 @@ function onReset() {
     allowOutsideClick: false,
   }).then((result) => {
     if (result.isConfirmed) {
-      location.reload();
+      window.location = window.location;
+      // location.reload();
     }
   });
 }
