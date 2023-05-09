@@ -1,3 +1,21 @@
+html {
+  height: 100%;
+  overflow: auto;
+}
+body {
+  height: 100%;
+}
+
+.swal2-popup {
+  /* https://stackoverflow.com/questions/57079469/how-to-change-font-family-of-sweetalert */
+  font-size: 1.25em !important;
+}
+
+h1,
+h2 {
+  user-select: none;
+}
+
 #table {
   width: 80%;
   overflow-x: auto;
@@ -7,7 +25,6 @@
   background-color: #4caf50;
   color: white;
   width: fit-content;
-  user-select: none;
 }
 #table td,
 #table th {
@@ -16,6 +33,7 @@
   padding-left: 8px;
   padding-right: 8px;
   width: fit-content;
+  user-select: none;
 }
 #table select {
   width: 80px;
@@ -26,6 +44,10 @@
   /* https://stackoverflow.com/questions/42750197/how-to-set-the-width-of-semantic-ui-dropdown */
   min-width: 0px;
 }
+.ui.selection.dropdown {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 .changedText {
   background-color: yellow;
@@ -33,6 +55,16 @@
 
 #problem,
 #answer {
+  /* https://www.bugbugnow.net/2020/02/font-family-mono.html */
+  font-family: "Noto Sans Mono CJK JP", "Source Han Code JP", "Ricty Diminished", "Ricty",
+    "Myrica M", "MyricaM M", "Rounded M+ 1m regular", "Rounded M+ 2m regular",
+    "Rounded Mgen+ 1m regular", "Rounded Mgen+ 2m regular", "Migu 1M", "Migu 2M", "M+ 1m", "M+ 2m",
+    monospace;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.monospace {
   /* https://www.bugbugnow.net/2020/02/font-family-mono.html */
   font-family: "Noto Sans Mono CJK JP", "Source Han Code JP", "Ricty Diminished", "Ricty",
     "Myrica M", "MyricaM M", "Rounded M+ 1m regular", "Rounded M+ 2m regular",

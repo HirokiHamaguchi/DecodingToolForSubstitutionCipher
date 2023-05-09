@@ -13,14 +13,21 @@ function onSubmit(e: Event) {
       icon: "success",
       title: "Congratulations!",
       html: "解読成功! おめでとうございます！<br>解読して頂きありがとうございました！<br>是非他の展示もご覧ください。",
-    }).then(() => {
-      location.reload();
+      allowOutsideClick: false,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+          location.reload();
+        }, 10);
+      }
     });
   } else {
     Swal.fire({
       icon: "error",
       title: "Oops...",
       html: "解読失敗...<br>もう一度挑戦してみましょう！",
+      allowOutsideClick: false,
     });
   }
 }

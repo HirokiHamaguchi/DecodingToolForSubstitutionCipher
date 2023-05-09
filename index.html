@@ -20,20 +20,20 @@
     <div class="ui container center aligned">
         <button id="howToButton" class="ui teal button">
             <i class="question circle icon"></i>
-            how to
+            説明
         </button>
         <button id="hintButton" class="ui yellow button">
             <i class="lightbulb outline icon"></i>
-            hint
+            ヒント
         </button>
         <button id="resetButton" class="ui blue button">
             <i class="sync icon"></i>
-            reset
+            リセット
         </button>
     </div>
     <h2>暗号文</h2>
     <div id="problem"></div>
-    <h2>変換テーブル</h2>
+    <h2>変換表</h2>
     <div id="table">
     </div>
     <h2>解読文</h2>
@@ -42,11 +42,11 @@
     <form id="form" class="ui form">
         <div class="ui container center aligned two fields">
             <div class="field">
-                <label for="date">Date</label>
+                <label for="date">日付</label>
                 <input type="date" id="date" name="date" value="" min="2023-01-01" max="2023-12-31" />
             </div>
             <div class="field">
-                <label for="place">Place</label>
+                <label for="place">場所</label>
                 <select id="place" name="place" class="ui fluid dropdown">
                     <option value="" selected disabled style="display:none"></option>
                     <option value="0">the pharmacy at the corner</option>
@@ -65,7 +65,7 @@
         <div class="ui container center aligned">
             <button id="submit" class="ui green button large">
                 <i class="paper plane icon"></i>
-                submit
+                解答する
             </button>
         </div>
     </form>

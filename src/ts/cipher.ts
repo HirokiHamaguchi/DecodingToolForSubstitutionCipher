@@ -55,7 +55,7 @@ for (const x of ALPHABET) {
   changedFlags.set(x, false);
 }
 
-function makeTable(): void {
+export function makeTable(): void {
   const table = document.createElement("table");
   table.classList.add("ui");
   TABLE.appendChild(table);
@@ -138,7 +138,7 @@ function decrypt(cipherText: string): string {
   return plainText;
 }
 
-function update(): void {
+export function update(): void {
   PROBLEM.innerText = cipherText;
   ANSWER.innerHTML = decrypt(cipherText);
   let ok = true;
@@ -149,8 +149,3 @@ function update(): void {
     }
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  makeTable();
-  update();
-});
