@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import { IMG_PATH_1, IMG_PATH_2, IMG_PATH_3, IMG_PATH_4 } from "./imgPath";
 
 const HOWTO = document.getElementById("howToButton") as HTMLButtonElement;
 const HINT = document.getElementById("hintButton") as HTMLButtonElement;
@@ -51,20 +52,20 @@ export function onHowTo() {
         html: `
         それでは、最後にこのツールの使い方を説明します。
         <h2>暗号文</h2>
-        <img src="/imgs/1.png" alt="暗号文" width="80%"><br>
+        <img src="${IMG_PATH_1}" alt="暗号文" width="80%"><br>
         これがAliceからBobへの換字式暗号による手紙です。これを解読しましょう。
         <h2>変換表・解読文</h2>
-        <img src="/imgs/2.png" alt="変換表" width="80%"><br>
+        <img src="${IMG_PATH_2}" alt="変換表" width="80%"><br>
         これを使い、暗号文の内容を推測します。
         変換表の対応するアルファベットに、予測した暗号化後のアルファベットを入れてみましょう。
         例えば、<b>"a"</b>を<b>"z"</b>と予測した場合、以下のようになります。
         これを使って、手紙の内容を解読して下さい。
         <h2>解答</h2>
-        <img src="/imgs/3.png" alt="解答" width="80%"><br>
+        <img src="${IMG_PATH_3}" alt="解答" width="80%"><br>
         暗号文が解読出来たら、答えとなる、AliceとBobが会う<b>日付</b>と<b>場所</b>を解答しましょう。<br>
         何回でも解答することが可能です。
         <h2>困ったら</h2>
-        <img src="/imgs/4.png" alt="ヒント" width="80%"><br>
+        <img src="${IMG_PATH_4}" alt="ヒント" width="80%"><br>
         ヒントを用意してあります。一番上のボタンから見られますので、困ったら見てみましょう。`,
         width: "80%",
         allowOutsideClick: false,
