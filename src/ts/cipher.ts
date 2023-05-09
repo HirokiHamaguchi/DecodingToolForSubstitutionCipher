@@ -1,6 +1,3 @@
-import Swal from "sweetalert2";
-import throwConfetti from "./particle";
-
 const PROBLEM = document.getElementById("problem") as HTMLDivElement;
 const ANSWER = document.getElementById("answer") as HTMLDivElement;
 const TABLE = document.getElementById("table") as HTMLDivElement;
@@ -148,36 +145,9 @@ function update(): void {
   for (const x of ALPHABET) {
     if (convertionTable.get(x) !== answerTable.get(x)) {
       ok = false;
-      console.log(x);
       break;
     }
   }
-  console.log({ ok });
-  if (ok) {
-    throwConfetti();
-    Swal.fire({
-      icon: "success",
-      title: "Congratulations!",
-      html: "解読成功! おめでとうございます！",
-    });
-  }
-}
-
-export function showHint() {
-  alert("hint!(todo)");
-}
-
-export function showAnswer() {
-  const selects = document.getElementsByTagName("select");
-  console.assert(selects.length == ALPHABET.length);
-  for (let i = 0; i < selects.length; i++) {
-    const select = selects[i]!;
-    const x = ALPHABET[i]!;
-    convertionTable.set(x, answerTable.get(x)!);
-    changedFlags.set(x, true);
-    select.value = answerTable.get(x)!;
-  }
-  update();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
