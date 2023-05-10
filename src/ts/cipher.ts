@@ -1,3 +1,5 @@
+import setDate from "./setDate";
+
 const PROBLEM = document.getElementById("problem") as HTMLDivElement;
 const ANSWER = document.getElementById("answer") as HTMLDivElement;
 const TABLE = document.getElementById("table") as HTMLDivElement;
@@ -58,6 +60,7 @@ export function reset() {
     changedFlags.set(x, false);
   }
   FORM.reset();
+  setDate();
   makeTable();
   update();
 }
