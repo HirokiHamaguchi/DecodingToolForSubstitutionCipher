@@ -2,7 +2,7 @@
 
 export default function setDate() {
   const now = new Date();
-  const theEventDay = new Date("2023-5-14");
+  const theEventDay = new Date("2023/5/14");
   const DATE = document.getElementById("date") as HTMLInputElement;
   DATE.value = now < theEventDay ? "2023-05-13" : "2023-05-14";
 }
