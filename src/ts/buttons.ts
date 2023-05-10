@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import start from "./start";
 import { IMG_PATH_1, IMG_PATH_2, IMG_PATH_3, IMG_PATH_4 } from "./imgPath";
 
 const HOWTO = document.getElementById("howToButton") as HTMLButtonElement;
@@ -166,8 +167,7 @@ function onReset() {
     allowOutsideClick: false,
   }).then((result) => {
     if (result.isConfirmed) {
-      window.location = window.location;
-      // location.reload();
+      start();
     }
   });
 }

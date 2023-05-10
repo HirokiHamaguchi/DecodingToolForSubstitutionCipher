@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import start from "./start";
 import throwConfetti from "./particle";
 
 const FORM = document.getElementById("form") as HTMLButtonElement;
@@ -18,8 +19,7 @@ function onSubmit(e: Event) {
       if (result.isConfirmed) {
         window.scrollTo(0, 0);
         setTimeout(() => {
-          window.location = window.location;
-          // location.reload();
+          start();
         }, 10);
       }
     });

@@ -1,6 +1,7 @@
 const PROBLEM = document.getElementById("problem") as HTMLDivElement;
 const ANSWER = document.getElementById("answer") as HTMLDivElement;
 const TABLE = document.getElementById("table") as HTMLDivElement;
+const FORM = document.getElementById("form") as HTMLFormElement;
 const ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 
 let cipherText = `Mqxc Sbs,
@@ -50,15 +51,21 @@ let answerTable: Map<string, string> = new Map(
 
 let convertionTable: Map<string, string> = new Map();
 let changedFlags: Map<string, boolean> = new Map();
-for (const x of ALPHABET) {
-  convertionTable.set(x, x);
-  changedFlags.set(x, false);
+
+export function reset() {
+  for (const x of ALPHABET) {
+    convertionTable.set(x, x);
+    changedFlags.set(x, false);
+  }
+  FORM.reset();
+  makeTable();
+  update();
 }
 
 export function makeTable(): void {
   const table = document.createElement("table");
   table.classList.add("ui");
-  TABLE.appendChild(table);
+  TABLE.replaceChildren(table);
 
   const tbody = document.createElement("tbody");
   let tr1 = document.createElement("tr");
@@ -113,7 +120,7 @@ export function makeTable(): void {
   table.appendChild(tbody);
 }
 
-function decrypt(cipherText: string): string {
+function _decrypt(cipherText: string): string {
   let plainText = "";
   for (const x of cipherText) {
     if (convertionTable.has(x.toLowerCase())) {
@@ -140,7 +147,7 @@ function decrypt(cipherText: string): string {
 
 export function update(): void {
   PROBLEM.innerText = cipherText;
-  ANSWER.innerHTML = decrypt(cipherText);
+  ANSWER.innerHTML = _decrypt(cipherText);
   let ok = true;
   for (const x of ALPHABET) {
     if (convertionTable.get(x) !== answerTable.get(x)) {
