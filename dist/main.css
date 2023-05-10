@@ -87,3 +87,7 @@ h2 {
   text-align: center;
 }
 
+#form #date {
+  min-height: 1em;
+}
+
