@@ -56,10 +56,10 @@ h2 {
 #problem,
 #answer {
   /* https://www.bugbugnow.net/2020/02/font-family-mono.html */
-  font-family: "Noto Sans Mono CJK JP", "Source Han Code JP", "Ricty Diminished", "Ricty",
-    "Myrica M", "MyricaM M", "Rounded M+ 1m regular", "Rounded M+ 2m regular",
-    "Rounded Mgen+ 1m regular", "Rounded Mgen+ 2m regular", "Migu 1M", "Migu 2M", "M+ 1m", "M+ 2m",
-    monospace;
+  font-family: "Note Sans monospace", "Noto Sans Mono CJK JP", "Source Han Code JP",
+    "Ricty Diminished", "Ricty", "Myrica M", "MyricaM M", "Rounded M+ 1m regular",
+    "Rounded M+ 2m regular", "Rounded Mgen+ 1m regular", "Rounded Mgen+ 2m regular", "Migu 1M",
+    "Migu 2M", "M+ 1m", "M+ 2m", monospace;
   margin-left: 5px;
   margin-right: 5px;
 }
