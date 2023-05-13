@@ -23,6 +23,12 @@ function onSubmit(e: Event) {
         }, 10);
       }
     });
+  } else if (PLACE.value === "") {
+    Swal.fire({
+      icon: "question",
+      title: "No Answer?",
+      html: "日付と場所を入力してください。<br>それが解答になります。",
+    });
   } else {
     Swal.fire({
       icon: "error",
