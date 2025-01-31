@@ -4,4 +4,4 @@
 
 ![imgOfTool](imgs/2.png)
 
-[GitHub Pages](https://hari64boli64.github.io/DecodingToolForSubstitutionCipher/)で公開しています。
+[GitHub Pages](https://hirokihamaguchi.github.io/DecodingToolForSubstitutionCipher/)で公開しています。
